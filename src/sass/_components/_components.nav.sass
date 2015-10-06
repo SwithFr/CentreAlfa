@@ -9,10 +9,10 @@
 .nav__item
     display: inline-block
     padding: 0 1em
-    position: relative
 
     &:hover, &:active, &:focus
         .subnav
+            padding: 1em 0
             background-color: $white
             border-bottom: 1px solid $lightGrey
             height: auto
@@ -22,10 +22,29 @@
             animation-name: slideDown
             animation-duration: $duration * 1.8
 
+    a:not(.hasSub)
+        position: relative
+
+        &:after
+            position: absolute
+            display: block
+            content: ''
+            width: 80%
+            bottom: -5px
+            left: 0%
+            transform: translateX(-50%)
+            border-bottom: 2px solid transparent
+
+
+            transition: all $duration ease-in-out
+
+        &:hover
+            &:after
+                left: 50%
+                border-bottom: 2px solid $beige
+
 .nav__logo
-    position: relative
     width: 30px
-    top: 5px
 
     +media-query(930)
         display: none
@@ -78,7 +97,6 @@
     position: absolute
     z-index: 100
     width: 250px
-    padding: 1em 0
 
     line-height: 1em
     text-indent: -9999999px
@@ -100,6 +118,17 @@
         display: block
 
         color: $grey
+
+        &:after
+            display: none !important
+
+        &:before
+            content: '>'
+            display: inline-block
+            margin-right: 5px
+
+            color: $beige
+            font-weight: 700
 
 .menu
     display: none
@@ -124,24 +153,19 @@
         &~.nav--sticky
             left: 0
             box-shadow: 0 0 15px rgba( 0, 0, 0, .2 )
-            
+
         &+.menu
             padding-left: 220px
 
 
 +keyframes( slideDown )
-    from, 60%, 75%, 90%, to
-        animation-timing-function: cubic-bezier( .215, .610, .355, 1 )
     0%
-        opacity: 0
         transform: translate3d(0, -100px, 0)
     60%
-        opacity: 1
         transform: translate3d(0, 55px, 0)
     75%
         transform: translate3d(0, 0px, 0)
     90%
         transform: translate3d(0, 15px, 0)
     to
-        opacity: 1
-        transform: none
+         transform: none

@@ -6,19 +6,18 @@
     background: url(../img/footer.jpg) no-repeat center
     background-size: cover
 
-.footer__block__title
-    margin-bottom: 1em
-
 .footer__list-item
-    list-style: none
     margin: .5em 0
 
 .footer__subDiv
     @include span(6)
     padding-left: 0
+    vertical-align: top
 
 .footer__link
     color: $white
+    display: block
+    margin-bottom: .5em
 
 .footer__service
     @include span(3)
@@ -28,6 +27,7 @@
 
 .footer__addresses
     @include span(5)
+    line-height: 1.2
 
 .footer__addresses, .footer__nav, .footer__service
     +media-query(900)
