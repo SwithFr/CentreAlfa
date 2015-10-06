@@ -19,7 +19,7 @@ html( lang='fr' )
             li.nav__item
                 a( title='En savoir plus sur nous', href='#' ) À propos
             li.nav__item
-                a( title='Découvrez les membres de notre équipe', href='#' ) Équipe
+                a.hasSub( title='Découvrez les membres de notre équipe', href='#' ) Équipe
                 ul.subnav
                     li.subnav__item
                         a( title="", href='#' ) Le soutient aux parents toxicomanes
@@ -63,7 +63,7 @@ html( lang='fr' )
             // subnav
             ul.nav.nav--bordered
                 li.nav__item
-                    a( title="En savoir plus sur le service de prévention", href="#prevention" ) Prévention
+                    a.hasSub( title="En savoir plus sur le service de prévention", href="#prevention" ) Prévention
                     ul.subnav
                         li.subnav__item
                             a( title="Dévouvrez notre Philosophie de travail", href='#' ) Philosophie de travail
@@ -84,7 +84,7 @@ html( lang='fr' )
                         li.subnav__item
                             a( title="", href='#' ) Personne de contact
                 li.nav__item
-                    a( title="En savoir plus sur le service thérapeutique", href="#therapeutique" ) Thérapeutique
+                    a.hasSub( title="En savoir plus sur le service thérapeutique", href="#therapeutique" ) Thérapeutique
                     ul.subnav
                         li.subnav__item
                             a( title="", href='#' ) Consultation santé mentale et assuetudes
@@ -93,7 +93,7 @@ html( lang='fr' )
                         li.subnav__item
                             a( title="", href='#' ) Personne de contact
                 li.nav__item
-                    a( title="En savoir plus sur le service de parentalité", href="#parent" ) Parentatlité
+                    a.hasSub( title="En savoir plus sur le service de parentalité", href="#parent" ) Parentatlité
                     ul.subnav
                         li.subnav__item
                             a( title="", href='#' ) Le soutient aux parents toxicomanes
@@ -106,7 +106,7 @@ html( lang='fr' )
                         li.subnav__item
                             a( title="", href='#' ) Personne de contact
                 li.nav__item
-                    a( title="En savoir plus sur le service de réduction des risques", href="#srd" ) Réduction des risques
+                    a.hasSub( title="En savoir plus sur le service de réduction des risques", href="#srd" ) Réduction des risques
                     ul.subnav
                         li.subnav__item
                             a( title="", href='#' ) Le projet des participants
@@ -139,7 +139,7 @@ html( lang='fr' )
             .wrapper
                 article.service.service--left#parent
                     h3.service__title 
-                        | Parentatlité
+                        | Parentalité
                     p.service__description
                         | Le Service "Parentalité" a été mis en place en 1994. Il est assuré par une équipe psycho- médico-sociale spécifique.
                         | L'objectif de ce service est double :
@@ -235,24 +235,16 @@ html( lang='fr' )
                 
                 section.footer__nav
                     h3.footer__block__title Navigation
-                    ul.footer__subDiv
-                        li.footer__list-item 
-                            a.footer__link( href='#', title='' ) Accueil
-                        li.footer__list-item 
-                            a.footer__link( href='#', title='' ) À propos
-                        li.footer__list-item 
-                            a.footer__link( href='#', title='' ) Équipe
-                        li.footer__list-item 
-                            a.footer__link( href='#', title='' ) Tarifs
-                    ul.footer__subDiv
-                        li.footer__list-item 
-                            a.footer__link( href='#', title='' ) Self help
-                        li.footer__list-item 
-                            a.footer__link( href='#', title='' ) FAQ
-                        li.footer__list-item 
-                            a.footer__link( href='#', title='' ) Liens
-                        li.footer__list-item 
-                            a.footer__link( href='#', title='' ) Job / Satge
+                    .footer__subDiv
+                        a.footer__link( href='#', title='' ) Accueil
+                        a.footer__link( href='#', title='' ) À propos
+                        a.footer__link( href='#', title='' ) Équipe
+                        a.footer__link( href='#', title='' ) Tarifs
+                    .footer__subDiv
+                        a.footer__link( href='#', title='' ) Self help
+                        a.footer__link( href='#', title='' ) FAQ
+                        a.footer__link( href='#', title='' ) Liens
+                        a.footer__link( href='#', title='' ) Job / Satge
                         
                 section.footer__addresses
                     h3.footer__block__title Contact
